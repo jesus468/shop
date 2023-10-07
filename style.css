@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@font-face {
+    font-family: aileron;
+    src: url(./fonts/aileron_0102/Aileron-Regular.otf);
+}
+@font-face {
+    font-family: aileron-light;
+    src: url(./fonts/aileron_0102/Aileron-Light.otf);
+}
+@font-face {
+    font-family: geomanist;
+    src: url(./fonts/Geomanist-RegularItalic/Geomanist-Regular&Italic/Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf);
+}
+@font-face {
+    font-family: nunito;
+    src: url(./fonts/Nunito/static/Nunito-Light.ttf);
+}
+
+header{
+    max-width: 100vw;
+    height: 60px;
+    background-image: linear-gradient( 45deg, #9733E5 -95%, #fff 100% );
+}
+h1{
+    font-family: geomanist;
+}
+h2{
+    font-family: aileron;
+}
+
+.product p, h4{
+    font-family: nunito;
+}
+main-product{
+    background-image: linear-gradient( #9733E5 85%, #453D4B);
+}
+main-product img{
+    height: 300px;
+}
+
+.inner-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.links-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.links-container li{
+    font-family: aileron;
+    list-style: none;
+    margin: 0 5px;
+    padding: 22px;
+}
+.fa{
+    margin: auto;
+}
+.main-container{
+    width: 100vw;
+}
+.main-inner-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    /*background-color: rgb(200, 134, 35);*/
+}
+.products-container{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+
+}
+.modify-button{
+    /*overflow: hidden;*/
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    /*z-index: 5;*/
+    transition: 1.7s ease-in-out;
+
+}
+.more-button{
+
+    width: 50px;    
+    position: static;
+    z-index: 2;
+}
+.more-container{
+    padding: 0 5px;
+    display: flex;
+    justify-content: right;
+}
+#more1{
+    margin: 0 0 0 0;
+}
+#more2{
+    margin: 0 0 0 -50px;
+    transition: all .5s ease-in-out    ;
+}
+.div-modify-button{
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    transition: 1s ease-in-out;
+    background-color: rgb(186, 186, 186);
+    border-radius:  50px;
+    width: 380px;
+    height: 50px;
+    right: 45px;
+    bottom: 40px;
+}
+.close-div{
+    width: 50px;
+    /*display: none;*/
+}
+.open-div{
+    display: flex;
+    animation: openDiv 1.2s ease-in-out;
+    transition: all 1.2s ease-in-out;
+}
+
+.hide{
+    animation: hiding .5s ease-in;
+
+    opacity: 0;
+}
+.more-B{
+    background-color: transparent;
+    border: none;
+    font-family: aileron;
+    color: #fff;
+    margin-left: 40px;
+    padding: 0 30px;
+    transition: all .5s ease-in-out;
+}
+.more-B:hover{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transition: ease-in-out 1s;
+}
+
+
+/*  ###########################################  */
+/*  ###########  insert data block  ###########  */
+/*  ###########################################  */
+.insert-data-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: rgba(226, 227, 228, 0.814);*/
+}
+.insert-data{
+    border: 2px solid #9733E5;
+    border-radius: 20px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #DEDEDE;
+}
+.product-data{
+    width: 80% ;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid #F9F9F9;
+    border-radius: 10px;
+    border-top: none;
+    /*padding: 30px 10px;
+    margin: 20px 10px;*/
+}
+.data-products-button{
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #9733E5;
+    color: #fff;
+}
+.product-label{
+    font-family: aileron;
+}
+#drop-area img{
+    object-fit: cover;
+    width: 30%;
+    
+}
+#drop-area{
+    width: 80%;
+    height: 200px;
+    border: 4px dashed #F9F9F9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#img-view{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-position:center ;
+    background-size: cover;
+
+}
+.none{
+    display: none;
+}
+
+/*  ###########################################  */
+/*  ###########  searching section  ###########  */
+/*  ###########################################  */
+.search-ctn{
+    width: 100%;
+    margin-right: -20px;
+}
+#search-input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: #A39FA5 solid 2px;
+    background-color: transparent;
+}
+.extended{
+    width: 300px;
+    display: flex;
+}
+
+
+/*  ###############################################  */
+/*  ###########  shopping cart section  ###########  */
+/*  ###############################################  */
+
+
+.shopping-cart-section{
+    width: 380px;
+    height: 100px;
+    background-color: #fff;
+    position: fixed;
+    top: 60px;
+    right: 0;
+}
+table{
+    /*justify-content: center;
+    
+    flex-direction: column;
+    */
+    width: 100%;
+    height: 100%;
+}/*
+table tbody{
+    overflow: scroll;
+}*/     
+thead tr{
+    background-color: #D1CED3;
+
+}
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    background-color: #fff;
+}
+th{
+    font-family: aileron-light;
+    display: block;
+    width: 100%;
+    /*background-color: greenyellow ;*/
+    padding: 15px;
+
+}
+td{
+    text-align: right;
+    width: 100%;
+    /*padding: 10px;*/
+    margin: 5px;
+}
+.eliminar{
+    width: 100%;
+}
+.cart-content{
+    font-family: nunito;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ANIMATIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+.popUp{
+    animation: popup 1.1s ease-in-out;
+}
+
+@keyframes popup {
+    0%{
+        transform: scale(0.8);
+    }
+    40%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.turnIn{
+    animation: turning-in 1s ease-in-out;
+}
+.turnOut{
+    animation: turning-out 1s ease-in-out;
+}
+@keyframes turning-out{
+    100%{
+        transform: rotateZ(180deg);
+    }
+}
+@keyframes turning-in{
+    100%{
+        transform: rotateZ(-180deg);
+    }
+}
+@keyframes hiding {
+    0%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+    }
+}
+@keyframes openDiv {
+    0%{
+        width: 50px;
+        opacity: 0;
+    }100%{
+        transform: translateX(-250px);
+        /*display: flex;*/
+        opacity: 1;
+        
+    }
+}
+
+
+
