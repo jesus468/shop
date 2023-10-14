@@ -516,7 +516,7 @@ td{
         margin: auto 20px !important;
         width: 20%;
     }
-    }.links-container li{
+    .links-container li{
         margin: 0 5px;
         padding: 7px;
     }
@@ -559,11 +559,26 @@ td{
     td{
         font-size: .6rem;
     }
+     /*---------------- buttons add  ----------------*/
+     .modify-button{
+        right: 5px;
+     }
+     .div-modify-button{
+        right: 10px;
+        width: 250px;
+     }
+     .more-B{
+        padding: 0 5px !important;
+     }
 
      /*---------------- insert data section  ----------------*/
-/*
-     .insert-data{
+
+     .insert-data-container{
+        top: 47%;
+        width: 80%;
+    }
+    .insert-data{
         width: 100%;
     }
-    */
+    
 }
