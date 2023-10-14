@@ -1,8 +1,17 @@
-* {
-    margin: 0;
+:root {
+    --shopping-cart-width: 380px;
+    --product-name: ;
+    --product-description: ;
+    --product-price: ;
+    --header-text: ;
+    
+
+
+}
+
+* {  margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 @font-face {
     font-family: aileron;
@@ -20,7 +29,9 @@
     font-family: nunito;
     src: url(./fonts/Nunito/static/Nunito-Light.ttf);
 }
-
+body{
+    max-width: 100vw;
+}
 header{
     max-width: 100vw;
     height: 60px;
@@ -28,6 +39,7 @@ header{
 }
 h1{
     font-family: geomanist;
+    font-size: 2.5rem;
 }
 h2{
     font-family: aileron;
@@ -35,9 +47,14 @@ h2{
 
 .product p, h4{
     font-family: nunito;
+    font-size: 1.2rem;
+}
+.product p{
+    font-size: 1rem;
 }
 main-product{
     background-image: linear-gradient( #9733E5 85%, #453D4B);
+
 }
 main-product img{
     height: 300px;
@@ -64,7 +81,7 @@ main-product img{
     margin: auto;
 }
 .main-container{
-    width: 100vw;
+    width: 100%;
 }
 .main-inner-container{
     display: flex;
@@ -72,13 +89,14 @@ main-product img{
     text-align: center;
     width: 80%;
     margin: 0 auto;
+    overflow: hidden;
     /*background-color: rgb(200, 134, 35);*/
 }
 .products-container{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    height: auto;
+    overflow: hidden;
 
 }
 .modify-button{
@@ -122,6 +140,7 @@ main-product img{
 }
 .close-div{
     width: 50px;
+    display: none;
     /*display: none;*/
 }
 .open-div{
@@ -249,7 +268,7 @@ main-product img{
 
 
 .shopping-cart-section{
-    width: 380px;
+    width: var(--shopping-cart-width);
     height: 100px;
     background-color: #fff;
     position: fixed;
@@ -354,3 +373,197 @@ td{
 
 
 
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MEDIA QUERY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+@media screen and (min-width : 1500px) {  /* long TV */
+    :root {
+        --shopping-cart-width: 600px;
+        --product-name: 2rem ;
+        --product-description: ;
+        --product-price: ;
+        --header-text: ;
+        --casual-text: ;
+    }
+    body{
+        background-color: green;
+    }
+
+    header{
+        height: 100px;
+    }
+    .links-container li{
+        font-size: 2rem;
+    }
+
+    /*---------------- products ----------------*/
+
+    main-product{
+        width: 20vw !important;
+        height: auto !important;
+    }
+    main-product img{
+        height: 25em ;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: var(--product-name) ;
+    }
+    h4{
+        font-size: 1.8 rem;
+    }
+    .product p{
+        font-size: 1.5rem;
+    }
+
+    /*---------------- shopping cart section ----------------*/
+
+    .shopping-cart-section{
+        top: 100px;
+    }
+    th{
+        font-size: 1.8rem;
+    }
+    td{
+        font-size: 1.6rem;
+    }
+    
+}
+
+
+@media screen and (max-width : 1328px) and (min-width: 961px ) {/* small laptop and long tablet */
+    body{
+        background-color: red;
+    }
+
+    /*---------------- insert data section  ----------------*/
+
+    .insert-data{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width : 960px) and (min-width: 481px ) {/*tablet */
+    :root{
+        --product-name: 1.2rem;
+        --shopping-cart-width: 310px;
+
+    }
+    body{
+        background-color: blue;
+    }
+    header{
+        height: 50px;
+    }
+    /*---------------- products ----------------*/
+
+    main-product{
+        width: 30vw !important;
+        height: auto !important;
+    }
+    main-product img{
+        height: 15em ;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: var(--product-name) ;
+    }
+    h4{
+        font-size: 1 rem;
+    }
+    .product p{
+        font-size: 1rem;
+    }
+    /*---------------- searching section ----------------*/
+    .extended{
+        width: 255px;
+    }
+
+    /*---------------- shopping cart section ----------------*/
+
+    .shopping-cart-section{
+        width: var(--shopping-cart-width);
+        top: 50px;
+    }
+    th{
+        font-size: .9rem;
+    }
+    td{
+        font-size: .6rem;
+    }
+
+     /*---------------- insert data section  ----------------*/
+
+     .insert-data{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width : 480px) and (min-width: 280px ) {/* phone */
+    body{
+        background-color: gray;
+    }
+    :root{
+        --product-name: 1rem;
+        --shopping-cart-width: 100%;
+    }
+    /* header */
+    .name-logo{
+        margin: auto 20px !important;
+        width: 20%;
+    }
+    }.links-container li{
+        margin: 0 5px;
+        padding: 7px;
+    }
+
+    /*---------------- products ----------------*/
+/*
+    main-product{
+        width: 30vw !important;
+        height: auto !important;
+    }
+    main-product img{
+        height: 15em ;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: var(--product-name) ;
+    }
+    h4{
+        font-size: 1 rem;
+    }
+    .product p{
+        font-size: 1rem;
+    }*/
+    /*---------------- searching section ----------------*/
+    .extended{
+        width: 150px;
+    }
+
+    /*---------------- shopping cart section ----------------*/
+/*
+    .shopping-cart-section{
+        width: var(--shopping-cart-width);
+        top: 50px;
+    }
+    th{
+        font-size: .9rem;
+    }
+    td{
+        font-size: .6rem;
+    }
+
+     /*---------------- insert data section  ----------------*/
+/*
+     .insert-data{
+        width: 100%;
+    }
+    */
+}

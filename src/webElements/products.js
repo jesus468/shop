@@ -31,12 +31,10 @@ class mainProduct extends HTMLElement{
         }*/
     }
     connectedCallback(){
-        this.style.display="block";
         this.style.width = "300px";
         /*this.style.height = "375px";*/
         this.style.margin = "20px";
         this.style.borderRadius = "20px";
-        this.style.backgroundColor="red"
         this.innerHTML =
         `<div style="display:flex; justify-content:center;" class="img">
             <Image style="/object-fit: cover; WIDTH:90%; margin: 10px;border-radius: 20px" src="${this.image}"></Image>
