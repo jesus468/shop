@@ -4,124 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/botDocuments/botStyles.css">
     <script src="src/webElements/products.js"></script>
     <script src="https://kit.fontawesome.com/d6901b2b19.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Your Store</title>
 </head>
 <body>
-    <header>
-        <div class="inner-container" style="margin: 0 auto;">
-            <div class="name-logo" style="margin: auto 100px;">
-                <p>Your Store</p>
-            </div>
-             
-            <div class="span">
-                <ul class="links-container" >
-                    <li class="link">About Us</li>
-                    <li class="link link-search">
-                        <div class="search-ctn none">
-                            <input type="text" id="search-input" placeholder="¿what are you looking for?">
-                        </div>
-                        <i class="fa-solid fa-magnifying-glass fa" style="color: #b4c9ee;"></i>
-                    </li>
-                    <li class="cart"><i class="fa-solid fa-cart-shopping fa" style="color: #b4c9ee;"></i></li>
-                </ul>
-            </div>
-        </div>
-        
-    </header>
-
-    <!--       shopping cart section         -->
-
-    <div class="shopping-cart-section none">
-            <table class="shopping-cart-container" >
-                <thead>
-                    <tr>
-                        <th>image</th>
-                        <th>title</th>
-                        <th>amount</th>
-                        <th>price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="eliminar"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-    </div>
+    <div class="inner-body">
 
 
-    <!-- ////////////////////////////////////////////////////////////////////// -->
-
-    <div class="main-container">
-        <div class="main-inner-container">
-            <h1 >More Viewed Products</h1>
-
-            <!--       insert data block         -->
-            <div class="insert-data-container none" >
-                <div class="insert-data">
-                    <label for="product-image" id="drop-area">
-                        <input type="file" accept="image/*" id="product-image" hidden>
-                        <div id="img-view">
-                            <img src="src/webElements/assets/img/subir.png">
-                            <p>drag and drop or click here<br>for upload your image</p>
-                            <span>upload any images from desktop</span>
-                        </div>
-                        
-                    </label>
-                    <label for="product-title" class="product-label">add a Title</label>
-                    <h3 class="none fill-this-camp">Fill this camp</h3>
-                    <input type="text" class="product-data" id="product-title" required="">
-
-                    <label for="product-summary" class="product-label">add a summary</label>
-                    <h3 class="none fill-this-camp">Fill this camp</h3>
-                    <input type="text" class="product-data" id="product-summary" required="">
-
-                    <label for="product-price" class="product-label">add the product price</label>
-                    <h3 class="none fill-this-camp">Fill this camp</h3>
-                    <input type="text" class="product-data" id="product-price" required="" pattern="[0-9]+">
-
-                    <div>
-                        <button id="upload-button" class="data-products-button"> upload </button>
-                        <button id="cancel-button" class="data-products-button"> cancel </button>
-                    </div>
+        <header>
+            <div class="inner-container" style="margin: 0 auto;">
+                <div id="name-logo" class="name-logo" style="margin: auto 100px;">
+                    <p>Your Store</p>
+                </div>
+                
+                <div class="span">
+                    <ul class="links-container" >
+                        <li class="link">About Us</li>
+                        <li class="link link-search">
+                            <div class="search-ctn none">
+                                <input type="text" id="search-input" placeholder="¿what are you looking for?">
+                            </div>
+                            <i class="fa-solid fa-magnifying-glass fa" style="color: #b4c9ee;"></i>
+                        </li>
+                        <li id="carrito" class="cart"><i class="fa-solid fa-cart-shopping fa" style="color: #b4c9ee;"></i></li>
+                    </ul>
                 </div>
             </div>
-
-
-            <!--       product container         -->
-
-            <div class="products-container">
-                <main-product ntitle="bueno si" summary="bueno es bueno compralo" price="300" image="src/webElements/assets/img/headphones.jpg" data-id="buenosi"></main-product>
-                <main-product ntitle="CAMARA SONY" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
-                <main-product ntitle="CAMARA apple" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
-                <main-product ntitle="CAMARA samsung" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
-            </div>
-
-        </div>
-
-        <div class="div-modify-button close-div">
-            <button class="more-B hide add">Add</button>
-            <button class="more-B hide del">Delete</button>
-        </div><!---->
-        <div class="modify-button">
-            <div class="more-container">
-                <img id="more1" class="more-button" src="src/webElements/assets/buttons-png/mas.png" alt="">
-                <img id="more2" class="more-button hide" src="src/webElements/assets/buttons-png/mas1.png" alt="">
-    
-            </div>
             
-        </div>
-    </div>
+        </header>
 
-    <script src="main.js"></script>
+        <!--       shopping cart section         -->
+
+        <div class="shopping-cart-section none">
+                <table class="shopping-cart-container" >
+                    <thead>
+                        <tr>
+                            <th>image</th>
+                            <th>title</th>
+                            <th>amount</th>
+                            <th>price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="eliminar"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        </div>
+
+
+        <!-- ////////////////////////////////////////////////////////////////////// -->
+
+        <div class="main-container">
+            <div class="main-inner-container">
+                <h1 >More Viewed Products</h1>
+
+                <!--       insert data block         -->
+                <div class="insert-data-container none" >
+                    <div class="insert-data">
+                        <label for="product-image" id="drop-area">
+                            <input type="file" accept="image/*" id="product-image" hidden>
+                            <div id="img-view">
+                                <img src="src/webElements/assets/img/subir.png">
+                                <p>drag and drop or click here<br>for upload your image</p>
+                                <span>upload any images from desktop</span>
+                            </div>
+                            
+                        </label>
+                        <label for="product-title" class="product-label">add a Title</label>
+                        <h3 class="none fill-this-camp">Fill this camp</h3>
+                        <input type="text" class="product-data" id="product-title" required="">
+
+                        <label for="product-summary" class="product-label">add a summary</label>
+                        <h3 class="none fill-this-camp">Fill this camp</h3>
+                        <input type="text" class="product-data" id="product-summary" required="">
+
+                        <label for="product-price" class="product-label">add the product price</label>
+                        <h3 class="none fill-this-camp">Fill this camp</h3>
+                        <input type="text" class="product-data" id="product-price" required="" pattern="[0-9]+">
+
+                        <div>
+                            <button id="upload-button" class="data-products-button"> upload </button>
+                            <button id="cancel-button" class="data-products-button"> cancel </button>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+
+                <!--       product container         -->
+
+                <div class="products-container">
+                    <main-product ntitle="bueno si" summary="bueno es bueno compralo" price="300" image="src/webElements/assets/img/headphones.jpg" data-id="buenosi"></main-product>
+                    <main-product ntitle="CAMARA SONY" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
+                    <main-product ntitle="CAMARA apple" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
+                    <main-product ntitle="CAMARA samsung" summary="mas bueno que lo otro" price="500" image="src/webElements/assets/img/camera.jpg" data-id="CAMARASONY"></main-product>
+                </div>
+
+            </div>
+
+            <div class="div-modify-button close-div">
+                <button class="more-B hide add">Add</button>
+                <button class="more-B hide del">Delete</button>
+            </div><!---->
+            <div class="modify-button">
+                <div class="more-container">
+                    <img id="more1" class="more-button" src="src/webElements/assets/buttons-png/mas.png" alt="">
+                    <img id="more2" class="more-button hide" src="src/webElements/assets/buttons-png/mas1.png" alt="">
+        
+                </div>
+                
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <!--<img src="src/images/bot/femenino/woman-deafult.png" alt="">--> 
+        <script src="src/botDocuments/firstBot.js"></script>
+
+
+        
+    </div>
 </body>
 </html>

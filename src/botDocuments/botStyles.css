@@ -1,0 +1,67 @@
+.options-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+
+}
+.character-buttons{
+    width: 70px;
+    height: 35px;
+    margin: 0 15px;
+}
+.character-dialog-container{
+    position: absolute;
+    width: 150px;
+    background-color: #FFF;
+    border: black .5px solid;
+    border-radius: 50px;
+    margin-left: -75px;
+    padding: 10px;
+}
+.character-dialog{
+    text-align: center;
+    margin: 10px;
+}
+.line-buttons{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.character-options{
+    transform:tr;
+    padding: 5px 10px;
+    list-style: none;
+}
+.tour-background{
+    
+    background-color: #000f00;
+    opacity: .60;
+    
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.full-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.firstButtons{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+.inner-body{
+    transition: all .7s ease-out;
+}
+.seleccionado-tour{
+    border: 2px solid red;
+}
